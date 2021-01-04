@@ -1,0 +1,89 @@
+<main class="influencerContainer">
+  <section class="form-container">
+    <div class="container">
+      <div class="row cardInfluencer">
+        <mat-card class="col-md-12 col-xs-12 col-lg-12">
+          <mat-card-header>
+            <h2>Registro del influencer</h2>
+          </mat-card-header>
+          <form action="">
+            <mat-car-content>
+              <mat-horizontal-stepper #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Tú nombre de usuario</ng-template>
+                    <mat-form-field class="col-md-12">
+                      <mat-label>Usuario</mat-label>
+                      <input matInput placeholder="@tuUsuario" maxlength="50" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="col-md-12">
+                    <mat-label>Nombre completo </mat-label>
+                      <input matInput placeholder="John Doe" maxlength="255" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="col-md-12">
+                      <mat-label >Télefono </mat-label>
+                        <input matInput placeholder="Ingresa tu número" maxlength="10" minlength="10" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="col-md-12">
+                      <mat-label>Correo eléctronico</mat-label>
+                      <input matInput formControlName="firstCtrl" maxlength="100" placeholder="tucorreo@tudominio.com"
+                             required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-button color="primary" matStepperNext>Siguiente</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                  <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Paso 2</ng-template>
+                    <mat-form-field class="col-md-12">
+                      <mat-label>Categoría</mat-label>
+                      <mat-select formControlName="secondCtrl">
+                        <mat-option value="option">Option</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="col-md-12">
+                      <mat-label>Red social</mat-label>
+                      <mat-select formControlName="secondCtrl">
+                        <mat-option value="option">Option</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="col-md-12">
+                      <mat-label>Seguidores</mat-label>
+                      <input matInput formControlName="secondCtrl" type="number" minlength="0">
+                    </mat-form-field>
+                    <mat-form-field class="col-md-12">
+                      <mat-label>Seguidos</mat-label>
+                      <input matInput formControlName="secondCtrl" type="number" minlength="0">
+                    </mat-form-field>
+                    <div>
+                      <button mat-button color="warn" matStepperPrevious>Regresar</button>
+                      <button mat-button color="primary" matStepperNext>Siguiente</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step>
+                  <ng-template matStepLabel>Finalizar</ng-template>
+                  <p>Gracias por llenar tus datos. :) </p>
+                  <div>
+                    <button mat-button color="accent" matStepperPrevious>Regresar</button>
+                    <button mat-button color="link" (click)="stepper.reset()">Reiniciar</button>
+                    <button mat-button color="primary">Guardar</button>
+                  </div>
+                </mat-step>
+              </mat-horizontal-stepper>
+            </mat-car-content>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+  <div class="float-back">
+    <button mat-fab color="accent" routerLink="/home" aria-label="Example icon button with a keyboard_backspace icon">
+      <mat-icon>keyboard_backspace</mat-icon>
+    </button>
+  </div>
+</main>
+  
+  

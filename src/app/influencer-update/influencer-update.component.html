@@ -1,0 +1,60 @@
+<main class="influencerContainer">
+    <section class="form-container">
+      <div class="container">
+        <div class="row cardInfluencer">
+          <mat-card class="col-md-12 col-xs-12 col-lg-12">
+            <mat-card-header>
+              <h2>Usuario: <span>Felipe Martínez</span> </h2>
+            </mat-card-header>
+            <form action="">
+              <mat-car-content>
+                <mat-form-field class="col-md-12 col-lg-12 col-xs-12" appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput>        
+                </mat-form-field>
+                <mat-form-field class="col-md-12 col-lg-12 col-xs-12" appearance="fill">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput>        
+                </mat-form-field>
+                <mat-form-field class="col-md-6 col-lg-6 col-xs-6" appearance="fill">
+                    <mat-label>Categoría</mat-label>
+                    <mat-select>
+                        <mat-option value="option">Option</mat-option>
+                    </mat-select>        
+                </mat-form-field>
+                <mat-form-field class="col-md-6 col-lg-6 col-xs-6" appearance="fill">
+                    <mat-label>Red social</mat-label>
+                    <mat-select>
+                        <mat-option value="option">Option</mat-option>
+                    </mat-select>         
+                </mat-form-field>
+                <mat-form-field class="col-md-6 col-lg-6 col-xs-6" appearance="fill">
+                    <mat-label>Seguidores</mat-label>
+                    <input matInput>        
+                </mat-form-field>
+                <mat-form-field class="col-md-6 col-lg-6 col-xs-6" appearance="fill">
+                    <mat-label>Seguidos</mat-label>
+                    <input matInput>        
+                </mat-form-field>
+            </mat-car-content>
+            </form>
+          </mat-card>
+        </div>
+      </div>
+    </section>
+    <div class="float-back">
+      <button mat-fab color="accent" routerLink="/home" aria-label="Example icon button with a keyboard_backspace icon">
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+    </div>
+    <div class="float-reload">
+      <button  mat-fab color="link" (click)="openDialog()" aria-label="Example icon button with a keyboard_backspace icon">
+        <mat-icon>replay</mat-icon>
+      </button>
+    </div>
+    <div class="float-save">
+        <button  mat-fab color="primary" (click)="openDialog()" aria-label="Example icon button with a keyboard_backspace icon">
+          <mat-icon>save</mat-icon>
+        </button>
+      </div>
+  </main>
